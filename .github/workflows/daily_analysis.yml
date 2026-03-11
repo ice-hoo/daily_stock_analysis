@@ -61,7 +61,13 @@ jobs:
           # ==========================================
           # AI 配置
           # ==========================================
-          # Gemini AI（主选）
+          # === AI 核心配置 (DeepSeek) ===
+          LLM_CHANNELS: "deepseek"
+          LLM_DEEPSEEK_API_KEY: ${{ secrets.LLM_DEEPSEEK_API_KEY }}
+          LLM_DEEPSEEK_BASE_URL: "https://api.deepseek.com"
+          LLM_MODEL: "deepseek-chat"
+          
+          # === Gemini 备份配置 (当 DeepSeek 欠费时使用) ===
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GEMINI_MODEL: ${{ vars.GEMINI_MODEL || secrets.GEMINI_MODEL || 'gemini-3-flash-preview' }}
           GEMINI_MODEL_FALLBACK: ${{ vars.GEMINI_MODEL_FALLBACK || secrets.GEMINI_MODEL_FALLBACK || 'gemini-2.5-flash' }}
