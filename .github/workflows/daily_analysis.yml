@@ -155,6 +155,12 @@ jobs:
           # ==========================================
           STOCK_LIST: ${{ vars.STOCK_LIST || secrets.STOCK_LIST || '600519' }}
           MARKET_REVIEW_REGION: ${{ vars.MARKET_REVIEW_REGION || secrets.MARKET_REVIEW_REGION || 'cn' }}
+
+          # 在这里新增你需要的变量映射
+          STOCK_GROUP_1: ${{ vars.STOCK_GROUP_1 || secrets.STOCK_GROUP_1 }}
+          EMAIL_GROUP_1: ${{ vars.EMAIL_GROUP_1 || secrets.EMAIL_GROUP_1 }}
+          STOCK_GROUP_2: ${{ vars.STOCK_GROUP_2 || secrets.STOCK_GROUP_2 }}
+          EMAIL_GROUP_2: ${{ vars.EMAIL_GROUP_2 || secrets.EMAIL_GROUP_2 }}
           
           # ==========================================
           # 运行配置 ⬅️ 新增！
